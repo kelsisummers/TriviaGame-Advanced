@@ -1,0 +1,52 @@
+body, html {
+    background-color: black;
+    background-image: url("../images/background-image.jpg"); 
+    color: white;
+    /* font-family: 'VT323', monospace; */
+    /* letter-spacing: 2px; */
+    /* font-size: 20px; */
+  }
+
+.jumbotron {
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(100, 102, 103, .9);
+    width: 70vw;
+    height: 820px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+
+input[type="radio"]{
+  margin: 0 10px 0 10px;
+}
+
+#quiz {
+    font-size: 16px;
+    letter-spacing: .5px;
+    font-family: 'Aldrich', sans-serif;
+    line-height: 31px;
+}
+
+#submit {
+    margin-top: 10px;
+}
+
+h1, h2, button {
+    font-family: 'Bungee', cursive;
+}
+
+h1, h2 {
+    text-shadow: -2px 0 #333333, 0 2px #333333, 2px 0 #333333, 0 -2px #333333;
+    letter-spacing: .5px;
+}
+
+h1 {
+    margin-top: -15px;
+}
+
+#over {
+    font-size: 36px;
+    line-height: 54px;
+}
