@@ -43,108 +43,92 @@ var myQuestions = [
     correctAnswer: 'b'},
 ];
 
+// Variable Used to Display Each Item In Array
+var i = -1;
+
 // Game Function
 
 $(document).ready(function(){
 
 // Start Button Click Will Begin Quiz Functions
 $(document).on('click', "#start", function (start){ 
-        $('#timer').text(' 01 : 30')
+        $('#timer').text(' 00 : 10')
         $('#quiz').css('margin-top',"0px");
         $('#start').remove();
-        $('#results').prepend('<button id="submit" type="button" class="start btn btn-light">Get Results</button>')
+
 
     //Main Game Function 
-    function generateQuiz (questions,quizContainer, resultsContainer,submitButton) {
+    function generateQuiz (questions,quizContainer, resultsContainer) {
 
-        // Variables and setInterval for Timer
-        var min = '01';
-        var sec = '29';
-        var timer = setInterval(function(){
-            $("#timer").html(min + " : " + sec); 
-            sec--;
-
-            // If Times Runs Out, Game Over
-            if (min == 00 && sec == 00) {
-              $("#timer").html("00:00");
-                clearInterval(timer);
-                alert("Time's Up!");
-                showResults(questions,quizContainer,resultsContainer);
-
-            // Otherwise Countdown Continues
-            } else if (sec < 10) {
-                sec = '0' + sec;
-                    if (sec == 00) {
-                        min--;
-                        sec = 59;
-                      if (min == 00) {
-                          min = '00';
-                        }
-                    }
-                }
-            }, 1000);
 
         // Function That Generates Questions and Answers; Displays to HTML   
         function showQuestions (questions, quizContainer) {
             var output = [];
-            var answers;
+            var answers = [];
+            var userAnswer = '';
+            var numCorrect = 0;
+            i++;
 
-            // Loops Over Questions Array To Create Quiz
-            for (var i = 0; i < questions.length; i++) {
-                answers =[];
+            $("#quiz").on('click', function() {
+                var userAnswer = $('input[name=question'+i+']:checked').val();
+                clearInterval(timer);
 
-                // Creates Multiple Choice Answers From Object
+                if (userAnswer === questions[i].correctAnswer){ 
+                    console.log('Right'); 
+                    numCorrect++;
+                    quizContainer.innerHTML = '<p id="over">Correct! <br>' + numCorrect + ' out of ' + questions.length + '</p>';
+                    $('#quiz').css('margin-top',"250px");
+                } else {
+                    console.log('Wrong!');
+                    quizContainer.innerHTML = '<p id="over">Wrong! <br>' + numCorrect + ' out of ' + questions.length + '</p>';
+                    $('#quiz').css('margin-top',"250px");
+                };
+            });
+
+
+
+            //     // Creates Multiple Choice Answers From Object
                 for (letter in questions[i].answers) {
                     answers.push('<input type="radio" name="question'+i+'" value="'+letter+'">'+ questions[i].answers[letter] + '</label>');
                 }
-                output.push('<div class ="question">' + questions[i].question + '</div>' + '<div class="answers">' + answers.join('') + '</div>');     
-            }
-            // Display to HTML
-            quizContainer.innerHTML = output.join('');           
-        }
-
-        // Game Over Function That Determines Correct Answers; Displays Restuls
-        function showResults (questions, quizContainer, resultsContainer) {
-            var answersContainers = quizContainer.querySelectorAll('.answers');
-            var userAnswer = '';
-            var numCorrect = 0;
-        
-                for(var i = 0; i < questions.length; i++) {
-
-                    // Grabs The Users Input For Each Questions
-                    userAnswer = (answersContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-                    
-                    // If User's Choice Is Correct, Increase Score
-                    if (userAnswer === questions[i].correctAnswer){
-                        numCorrect++;
-                    };
-                }
-                
-                // Game Over Page With Results
-                quizContainer.innerHTML = '<p id="over">Game Over <br>' + numCorrect + ' out of ' + questions.length + '</p>';
-                $('#quiz').css('margin-top',"250px");
-                $('#submit').remove();
-                $('#results').prepend('<button id="start" type="button" class="btn btn-light" style="margin-top:10px">Play Again?</button>')
-        
+                output.push('<div class ="question">' + questions[i].question + '</div>' + '<div class="answers">' + answers.join('') + '</div>');
+            // // Display to HTML
+            quizContainer.innerHTML = output.join('');             
         }
 
         // Calls Function To Create Quiz
-        showQuestions(questions, quizContainer)
+                // Variables and setInterval for Timer
+                var min = '00';
+                var sec = '10';
+                showQuestions(questions, quizContainer)
+                var timer = setInterval(function(){
+                    
+                    
+                    $("#timer").html(min + " : " + sec); 
+                    sec--;
+                    console.log(sec)
+        
+                    // If Times Runs Out, Game Over
+                    if (sec < 0) {
+                      $("#timer").html("00:00");
+                        // clearInterval(timer);
+                        alert("Time's Up!");
+                        showQuestions(questions,quizContainer);
+                        sec = '10';
 
-        // Creates Submit Button That Ends Quiz
-        submitButton.onclick = function(submit) {
-            showResults(questions,quizContainer,resultsContainer);
-            clearInterval(timer);
-        }           
+                    } else if (sec < 10) {
+                        sec = '0' + sec;
+                        }
+                    }, 1000);   
     }
 
 // Grabs Elements From HTML for Functions
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
-var submitButton = document.getElementById('submit');
+
 
 // Calls The Quiz Function
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+generateQuiz(myQuestions, quizContainer, resultsContainer);
 
 });
 });
