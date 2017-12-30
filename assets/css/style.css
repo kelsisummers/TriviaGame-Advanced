@@ -1,10 +1,9 @@
+/* General Styles */
+
 body, html {
     background-color: black;
     background-image: url("../images/background-image.jpg"); 
     color: white;
-    /* font-family: 'VT323', monospace; */
-    /* letter-spacing: 2px; */
-    /* font-size: 20px; */
   }
 
 .jumbotron {
@@ -15,22 +14,6 @@ body, html {
     height: 820px;
     margin-top: 20px;
     padding: 20px;
-}
-
-
-input[type="radio"]{
-  margin: 0 10px 0 10px;
-}
-
-#quiz {
-    font-size: 16px;
-    letter-spacing: .5px;
-    font-family: 'Aldrich', sans-serif;
-    line-height: 31px;
-}
-
-#submit {
-    margin-top: 10px;
 }
 
 h1, h2, button {
@@ -46,7 +29,41 @@ h1 {
     margin-top: -15px;
 }
 
+h2 {
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+#timer {
+    letter-spacing: 3px;
+}
+
+/* Start Button */
+#start {
+    height: 100px; 
+    font-size: 32px;
+}
+
+/* Trivia Quiz Container */
+
+#quiz {
+    margin-top: 250px;
+    font-size: 28px;
+    letter-spacing: .5px;
+    font-family: 'Aldrich', sans-serif;
+    line-height: 50px;
+}
+
+/* Multiple Choice Input Buttons */
+
+input[type="radio"]{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* Current Answer and Score */
 #over {
     font-size: 36px;
     line-height: 54px;
+    text-align: center;
 }
