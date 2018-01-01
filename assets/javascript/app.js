@@ -84,6 +84,7 @@ $(document).on('click', "#start", function (start){
 
             // Increments i by 1 Each Time Function is Called
             i++;
+            console.log(i);
 
             // If i is Less Than The Total Number of Questions 
             if (i < questions.length) {
@@ -98,7 +99,7 @@ $(document).on('click', "#start", function (start){
                 // When an Answer is Selected
                 $('#quiz').off().on('click', "input", function() {
                     // Resets Timer to 5 Seconds on Answer Screen
-                    sec = '05';
+                    sec = '03';
                     // Stores User Guess as Variable
                     var userAnswer = $('input[name=question'+i+']:checked').val();
                     // Hides Timer Until Next Question is Revealed
@@ -161,16 +162,18 @@ $(document).on('click', "#start", function (start){
 
                     // If Time Runs Out & Answer is Not Clicked
                     } else {
+                        i--;
                         // Hides Timer
                         $("#timer").hide();
                         // Reset Timer
-                        sec = '05';
+                        sec = '03';
                         // Sets Variable to True for Question Function
                         answerClick = true;
                         // Calls Question Function
                         showQuestions(questions,quizContainer);
                         // Troubleshoot to Console
                         console.log('Wrong!');
+                        console.log(i);
                         // Display Result to HTML
                         quizContainer.innerHTML = '<p id="over">Wrong! <br>Correct Answer:<br>' + questions[i].correctAnswer + ') ' + questions[i].text + '<br>' + numCorrect + ' out of ' + questions.length + '</p>';
                     };        
