@@ -11,3 +11,5 @@ Instuctions:
   - Next question will display automatically
   - At 'Game Over', final score is displayed
   - To reset game and play again, click 'Play Again?'
+  
+GitHub Pages Link: https://kelsisummers.github.io/TriviaGameAdvanced-JavaScript-Timers/
