@@ -4,7 +4,7 @@ Project 6 Advanced: Create a Trivia game that shows only one question until the 
 
 Theme: Craft Beer Trivia
 
-GitHub Pages: https://kelsisummers.github.io/TriviaGameAdvanced-JavaScript-Timers/
+GitHub Pages: https://kelsisummers.github.io/TriviaGame-Advanced/
 
 Instuctions:
   - Click 'Start Game'
