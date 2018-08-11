@@ -1,11 +1,8 @@
-/* General Styles */
-
 /* Background Image */
 body, html {
   background-color: black;
   background-image: url("../images/background-image.jpg"); 
   color: white;
-
 }
 
 /* Game Play Container */
@@ -99,7 +96,7 @@ input[type="radio"]{
     font-size: 24px;
   }
   .question, #over {
-      font-size: 18px;
+    font-size: 18px;
   }
   .answers {
     font-size: 16px;

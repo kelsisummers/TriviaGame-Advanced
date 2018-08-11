@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trivia Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trivia Game</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-        <!-- My CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Aldrich|Bungee" rel="stylesheet">
-        
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Aldrich|Bungee" rel="stylesheet">      
 </head>
 <body>
-
-        <!-- Quiz Container -->
-        <div class="jumbotron">
-
-                <h1 class="display-3">Craft Brews Trivia</h1>
-
-                <!-- Countdown Timer -->
-                <h2>Time Remaining:  <span id='timer'> </span></h2>
-                
-                <!-- Quiz Questions & Answers -->
-                <div id="quiz"></div>
-                <button id="start" type="button" class="btn btn-light">Start Game</button>
-        </div>
+	
+  <!-- Quiz Container -->
+  <div class="jumbotron">
+    <h1 class="display-3">Craft Brews Trivia</h1>
+  	<!-- Countdown Timer -->
+    <h2>Time Remaining:  <span id='timer'> </span></h2>            
+    <!-- Quiz Questions & Answers -->
+    <div id="quiz"></div>
+    <button id="start" type="button" class="btn btn-light">Start Game</button>
+  </div>
 
 <!-- Javascript and JQuery Links -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
 <script src="assets/javascript/app.js"></script>
 </body>
 </html>
