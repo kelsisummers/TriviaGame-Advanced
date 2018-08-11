@@ -1,10 +1,10 @@
 # TriviaGameAdvanced
 
-Project 6 Advanced: Create a Trivia game that shows only one question until the player answers it or their time runs out. Use JavaScript for the logic and jQuery to manipulate HTML. Utilize setTimeout and setInterval.
+GitHub Pages: https://kelsisummers.github.io/TriviaGame-Advanced/
+
+A Trivia game that shows only one question until the player answers it or their time runs out. Uses JavaScript for the logic and jQuery to manipulate HTML. Utilizes setTimeout and setInterval.
 
 Theme: Craft Beer Trivia
-
-GitHub Pages: https://kelsisummers.github.io/TriviaGame-Advanced/
 
 Instuctions:
   - Click 'Start Game'
@@ -15,7 +15,8 @@ Instuctions:
   - To reset game and play again, click 'Play Again?'
   
 Software Stack:
-  - Javascript
+  - JavaScript
+  - jQuery
   - HTML
   - CSS
-  - Bootstrap Framework
+  - Bootstrap CSS Framework
