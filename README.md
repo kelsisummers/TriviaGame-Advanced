@@ -14,7 +14,7 @@ Instuctions:
   - At 'Game Over', final score is displayed
   - To reset game and play again, click 'Play Again?'
   
-Software Stack:
+Tech Stack:
   - JavaScript
   - jQuery
   - HTML
