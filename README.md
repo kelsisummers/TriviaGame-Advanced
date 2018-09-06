@@ -2,7 +2,7 @@
 
 <strong>Hosted App Link: https://kelsisummers.github.io/TriviaGame-Advanced/</strong>
 
-A Trivia game that shows only one question until the player answers it or their time runs out. Uses JavaScript for the logic and jQuery to manipulate HTML. Utilizes setTimeout and setInterval.
+A trivia game that shows only one question until the player answers it or their time runs out. Uses JavaScript for the logic and jQuery to manipulate HTML. Utilizes setTimeout and setInterval.
 
 Theme: Craft Beer Trivia
 
