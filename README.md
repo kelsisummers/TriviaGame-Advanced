@@ -1,4 +1,4 @@
-# TriviaGameAdvanced
+# TriviaGame-App
 
 <strong>Hosted App Link: https://kelsisummers.github.io/TriviaGame-Advanced/</strong>
 
