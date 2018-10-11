@@ -1,6 +1,6 @@
 # TriviaGame-App
 
-<strong>Hosted App Link: https://kelsisummers.github.io/TriviaGame-Advanced/</strong>
+<strong>Hosted App Link: https://kelsisummers.github.io/TriviaGame-App/</strong>
 
 A trivia game that shows only one question until the player answers it or their time runs out. Uses JavaScript for the logic and jQuery to manipulate HTML. Utilizes setTimeout and setInterval.
 
